@@ -1,0 +1,7 @@
+configVersion: 1
+project: ubuntubase
+---
+
+image: ~
+dockerfile: ./Dockerfile
+
