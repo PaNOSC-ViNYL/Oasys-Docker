@@ -1,6 +1,6 @@
 # Oasys Local Docker
 
-In order to run to container clone this repo
+In order to run the container clone the repo
 
 ```
 git clone https://gitlab.elettra.eu/panosc/ceric/oasys-local-docker.git
@@ -10,13 +10,13 @@ bash runn.sh
 
 ```
 
-## What does runn.sh
+## runn.sh
 
-this container run with the UID 1000 (user oasys)
+this container runs with the UID 1000 (user oasys)
 
 `--volume=$HOME:/home/oasys:rw `
 
-it binds mount your home folder to oasys's home, all file created from the container will be owned by uid 1000
+it binds mount your home folder to oasys's home, all files created from the container will be owned by uid 1000
 
 
 This is the content of runn.sh
