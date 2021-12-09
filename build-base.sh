@@ -11,7 +11,8 @@ apt-get install -y tzdata
 ln -fs /usr/share/zoneinfo/Europe/Rome /etc/localtime
 apt-get install -y apt-transport-https ca-certificates curl software-properties-common sudo gnupg  \
                    bzip2 ca-certificates libglib2.0-0 libxext6 libsm6 libxrender1 git mercurial subversion findutils \
-                   libglu1-mesa-dev freeglut3-dev mesa-common-dev libgl1 libxcb* qt5dxcb-plugin
+                   libglu1-mesa-dev freeglut3-dev mesa-common-dev libgl1 libxcb* qt5dxcb-plugin build-essential libgfortran4
+
 
 
 
@@ -58,7 +59,7 @@ conda activate base
 #apt-cache policy xraylib
 ### from prepare script
 # SCIPY
-apt-get -y install libblas-dev liblapack-dev libatlas-base-dev build-essential
+apt-get -y install libblas-dev liblapack-dev libatlas-base-dev 
 # MATPLOTLIB
 apt-get -y install libfreetype6 libfreetype6-dev
 

@@ -1,15 +1,17 @@
 # Makefile for building && publishing
 #REGISTRY=registry.elettra.eu:5000
 HUBUSER=ceric
-TAG=oasys:20
+LOCALTAG=oasys:20
+TAG=oasys.20
 REPO=panosc-oasys-local
 #IMAGE=`cat werf.yaml |grep image|awk '{print $NF}'`
 
 
 build:
-	docker build . -t $(TAG)
+	docker build . -t $(LOCALTAG)
 
 publish:
+	docker tag $(LOCALTAG) $(HUBUSER)/$(REPO):$(TAG)
 	docker push $(HUBUSER)/$(REPO):$(TAG)
 
 #all: 
